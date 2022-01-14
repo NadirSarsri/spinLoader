@@ -1,0 +1,61 @@
+:root {
+  --color-primary: rgb(147, 20, 220);
+  --color-secondary: rgb(76, 86, 233);
+  --color-tertiary: rgb(158, 186, 246);
+  --color-quaternary: rgb(170, 225, 250);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  padding: 20px;
+  height: 250px;
+  width: 250px;
+  border-top: 5px solid var(--color-primary);
+  background-color: transparent;
+  border-radius: 50%;
+  animation: spinner 2.5s linear infinite;
+}
+.medium,
+.small,
+.x-small {
+  height: 100%;
+  width: 100%;
+}
+.medium {
+  border-top-color: var(--color-secondary);
+  animation: spinner 2s linear infinite;
+}
+.small {
+  border-top-color: var(--color-tertiary);
+  animation: spinner 1.5s linear infinite;
+}
+.x-small {
+  border-top-color: var(--color-tertiary);
+  animation: spinner 0.75s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
